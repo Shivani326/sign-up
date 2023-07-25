@@ -1,11 +1,3 @@
-# Ignore compiled code
-*.o
-*.class
-
-# Ignore log files
-*.log
-
-# Ignore build directories
-/build/
-/dist/
-/node_modules/
+**/node_modules/
+**.env
+**/.DS_Store
