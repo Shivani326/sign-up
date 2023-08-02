@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Steps to Get Started
 
-## Getting Started
+First, we need to download the required packages and libs:
 
-First, run the development server:
+```bash
+npm i .
+```
+
+Create a .env file and make sure to paste the correct mongodb string.
+
+Ex. mongodb+srv://myusername:mypassword<span>@</span>cluster0.3o4wfho.mongodb.net/
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Sample Flow
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+First Register with the required information:
 
-## Learn More
+<img width="420" height="320" alt="Screenshot 2023-08-03 at 12 16 54 AM" src="https://github.com/Shivani326/sign-up/assets/73454814/8da0aa3e-3dff-4d1c-9f30-70dd5dd58619">
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Now see if this entry has been added to the database:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+<img width="634" alt="Screenshot 2023-08-03 at 12 39 14 AM" src="https://github.com/Shivani326/sign-up/assets/73454814/b5e369e9-53eb-4d5f-8722-5f311099b58b">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Then go to the login page:
+
+<img width="420" height="320" alt="Screenshot 2023-08-03 at 12 17 27 AM" src="https://github.com/Shivani326/sign-up/assets/73454814/28f90d55-73e1-44c3-96a7-a097cb9fbe0e">
+
+
+If the credentials are correct, you'll get this page:
+
+<img width="420" height="320" alt="Screenshot 2023-08-03 at 12 17 45 AM" src="https://github.com/Shivani326/sign-up/assets/73454814/38bc3c46-bf8d-4dd2-b603-973e38409fb8">
+
+
+Otherwise, you'll get:
+
+<img width="420" height="320" alt="Screenshot 2023-08-03 at 12 33 32 AM" src="https://github.com/Shivani326/sign-up/assets/73454814/5bbebbcb-2599-40c7-9706-fc440753b139">
+
+
+
+
