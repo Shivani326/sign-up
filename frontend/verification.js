@@ -35,9 +35,28 @@ const Verification = () => {
   };
 
   return (
+    // Container at the top with shadow
     <div>
-      {/* Container at the top with shadow */}
-      {/* ... your existing code ... */}
+     {/* Container at the top with shadow */}
+      <div style={{ 
+        height: '90px',
+        boxShadow: '3px 0px 16px rgba(0, 0, 0, 0.5)',
+        backgroundColor: 'white',
+        position: 'relative', // Needed for positioning the logo
+      }}>
+
+     <img
+      src="https://static.wixstatic.com/media/9ecf7a_bc1e2afa5a684e41ab1ef3e3189089d6~mv2.png/v1/crop/x_0,y_365,w_1080,h_315/fill/w_926,h_270,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Add%20a%20heading%20(1).png"
+      alt="Add a heading (1).png"
+      style={{ 
+        width: '300px', 
+        height: 'auto',
+        position: 'absolute',
+        top: 5,
+        left: 10,
+         }}
+      ></img>
+      </div>
 
       <div
         style={{
