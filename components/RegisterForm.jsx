@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -114,18 +113,7 @@ export default function RegisterForm() {
               </li>
             </ul>
           </nav>
-          <div style={{ marginBottom: '40px' }}>
-            <label htmlFor="email" style={{ color: '#333333' }}>Name:</label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Impactboard Team"
-                onChange={(e) => setName(e.target.value)}
-                style={{ color: '#333333', width: '100%', padding: '10px', fontSize: '16px' }}
-              />
-            </div>
+          
           <div style={{ marginBottom: '40px' }}>
             <label htmlFor="email" style={{ color: '#333333' }}>Email:</label>
             <input
