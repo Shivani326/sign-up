@@ -3,21 +3,21 @@ import mongoose from "mongoose";
 const employeeSchema = new mongoose.Schema({
   fullname: {
     type: String,
-    required: [true, "Please provide the company name"],
+    //required: [true, "Please provide the company name"],
   },
   email: {
     type: String,
-    required: [true, "Please provide an Email Id!"],
+    //required: [true, "Please provide an Email Id!"],
     unique: true,
   },
   password: {
     type: String,
-    required: true,
+   // required: true,
   },
   companyId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Company",
-    required: true,
+   // required: true,
   },
   profile_image: {
     type: String, //imageURL
@@ -35,7 +35,8 @@ const employeeSchema = new mongoose.Schema({
     type: String,
   },
   selectedChallenges: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
+   // { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
+   {type: String},
   ],
   isVerified: {
     type: Boolean,

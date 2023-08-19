@@ -85,6 +85,7 @@ export default function SignUpPage() {
 
 */
 
+
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -97,19 +98,19 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
 
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
   const [user, setUser] = React.useState({
-    fullname: "",
+   // fullname: "",
     email: "",
     password: "",
-    companyName: "",
+   // companyName: "",
   });
 
   // Rest of the component code ...
@@ -117,9 +118,9 @@ const SignUp = () => {
   const onSignUp = async () => {
     try {
       const response = await axios.post("/api/employee/signup", user);
-      console.log("Registration is successful", response.data);
+      //console.log("Registration is successful", response.data);
       router.push("/login");
-    } catch (error: any) {
+    } catch (error) {
       console.log("Registration failed", error.message);
       toast.error(error.message);
     }
@@ -253,7 +254,7 @@ const SignUp = () => {
           <div style={{ textAlign: "center" }}>
             <button
               type="submit"
-              onClick={onSignUp}
+              //onClick={onSignUp}
               style={{
                 padding: "10px 20px",
                 fontSize: "16px",
