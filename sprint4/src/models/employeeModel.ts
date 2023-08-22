@@ -1,23 +1,27 @@
 import mongoose from "mongoose";
 
 const employeeSchema = new mongoose.Schema({
+  employee_id:{
+    type: String,
+    //required: true,
+  },
   fullname: {
     type: String,
     //required: [true, "Please provide the company name"],
   },
   email: {
     type: String,
-    //required: [true, "Please provide an Email Id!"],
+    required: [true, "Please provide an Email Id!"],
     unique: true,
   },
   password: {
     type: String,
-   // required: true,
+    required: true,
   },
   companyId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Company",
-   // required: true,
+   //required: true,
   },
   profile_image: {
     type: String, //imageURL

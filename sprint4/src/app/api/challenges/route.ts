@@ -32,6 +32,7 @@ export async function POST(request: NextRequest) {
     });
 
     await newChallenge.save();
+    console.log(newChallenge);
     return NextResponse.json({
       success: true,
       message: "Challenge added successfully.",

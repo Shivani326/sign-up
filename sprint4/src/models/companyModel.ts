@@ -1,19 +1,23 @@
 import mongoose from "mongoose";
 
 const companySchema = new mongoose.Schema({
+  id:{
+    type: String,
+    //required: true,
+  },
   name: {
     type: String,
-    required: [true, "Please provide the company name"],
+    //required: [true, "Please provide the company name"],
     unique: true,
   },
   email_domain: {
     type: String,
-    required: [true, "Please provide an Email domain!"],
+    //required: [true, "Please provide an Email domain!"],
     unique: true,
   },
   password: {
     type: String,
-    required: true,
+    //required: true,
   },
   white_listed_email_addresses: {
     type: String,
@@ -38,7 +42,7 @@ const companySchema = new mongoose.Schema({
     type: String,
   },
   selectedChallenges: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
+    { type: String, ref: "Challenge" },
   ],
   isVerified: {
     type: Boolean,
