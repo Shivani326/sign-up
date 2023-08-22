@@ -30,9 +30,17 @@ export async function POST(request: NextRequest) {
       });
     }
 */
+
+const emailParts = email.split('@');
+const domain = emailParts[1];
+console.log(domain);
+const result = await Company.findOne({ email_domain: domain });
+
+
     const salt = await bcryptjs.genSalt(10);
     const hashedPassword = await bcryptjs.hash(password, salt);
 
+    if(result){
     const newEmployee = new Employee({
      // fullname,
       email,
@@ -54,6 +62,13 @@ export async function POST(request: NextRequest) {
       success: true,
       message: "Employee registration successful.",
     });
+  }
+  else{
+    return NextResponse.json({
+      success: false,
+      message: "Company not found!",
+    });
+  }
   } catch (error: any) {
     console.log(error);
     return NextResponse.json({

@@ -49,6 +49,8 @@ export async function POST(request: NextRequest) {
     });
 
     const savedCompany = await newCompany.save();
+
+    
     console.log(savedCompany);
     return NextResponse.json({
       success: true,

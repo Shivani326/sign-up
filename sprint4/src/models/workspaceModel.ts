@@ -11,7 +11,7 @@ const workspaceSchema = new mongoose.Schema({
     required: true,
   },
   users: {
-    type: Number,
+    type: Number,  // it should be array ; employee
   },
   campaigns: [
     {type: String}],
