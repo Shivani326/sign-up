@@ -42,7 +42,7 @@ const companySchema = new mongoose.Schema({
     type: String,
   },
   selectedChallenges: [
-    { type: String, ref: "Challenge" },
+    { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
   ],
   isVerified: {
     type: Boolean,

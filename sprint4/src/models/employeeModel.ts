@@ -39,8 +39,8 @@ const employeeSchema = new mongoose.Schema({
     type: String,
   },
   selectedChallenges: [
-   // { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
-   {type: String},
+    { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
+   //{type: String},
   ],
   isVerified: {
     type: Boolean,

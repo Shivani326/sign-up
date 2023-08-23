@@ -8,13 +8,14 @@ const workspaceSchema = new mongoose.Schema({
   },
   id: {
     type: Number,
-    required: true,
+   // required: true,
   },
-  users: {
-    type: Number,  // it should be array ; employee
-  },
-  campaigns: [
+  users: [
     {type: String}],
+  
+  campaigns: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "Challenge" },
+  ]
   
 });
 

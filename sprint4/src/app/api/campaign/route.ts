@@ -1,5 +1,5 @@
 import { connect } from "@/dbConfig/dbConfig";
-import Campaign from "@/models/campaign";
+import Campaign from "@/models/campaignModel";
 import { NextRequest, NextResponse } from "next/server";
 
 

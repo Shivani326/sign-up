@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    employee.selectedChallenges.push(challenge.title);
+    employee.selectedChallenges.push(challengeId);
     await employee.save();
 
     // Log updated employee for debugging

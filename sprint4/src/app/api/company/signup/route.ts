@@ -1,5 +1,6 @@
 import { connect } from "@/dbConfig/dbConfig";
 import Company from "@/models/companyModel";
+import Workspace from "@/models/workspaceModel";
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 
@@ -50,7 +51,8 @@ export async function POST(request: NextRequest) {
 
     const savedCompany = await newCompany.save();
 
-    
+    const newWorkspace = new Workspace({ name: name, });
+    newWorkspace.save();
     console.log(savedCompany);
     return NextResponse.json({
       success: true,

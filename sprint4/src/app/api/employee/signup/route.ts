@@ -2,6 +2,7 @@ import { connect } from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
 import Company from "@/models/companyModel";
 import Employee from "@/models/employeeModel";
+import Workspace from "@/models/workspaceModel";
 import bcryptjs from "bcryptjs";
 
 connect();
@@ -56,6 +57,10 @@ const result = await Company.findOne({ email_domain: domain });
     });
 
     const savedEmployee = await newEmployee.save();
+    const workspace = await Workspace.findOne({name:result.name});
+    workspace.users.push(savedEmployee.email);
+    await workspace.save();
+    console.log(workspace.name);
     console.log("User:");
     console.log(savedEmployee);
     return NextResponse.json({
