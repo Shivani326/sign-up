@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'
 
 const Challenge = () => {
   // Mocked data for progress items
@@ -11,7 +12,8 @@ const Challenge = () => {
   ];
   return (
     <div className="bg-[#F6F9FD] text-black p-4 rounded-3xl">
-      <h1 className="m-5 text-3xl">Active Challenges</h1>
+       <h1 className="m-2 mt-2 -mt-8 text-3xl">Active Challenges</h1>      
+       {/* <h1 className="m-5 text-3xl">Active Challenges</h1>  */}
 
       <div className="bg-[#F6F9FD] grid gap-4 py-4 h-100 text-white rounded-3xl">
       <div className="flex space-x-4">
@@ -19,10 +21,13 @@ const Challenge = () => {
           <div
             key={challenge.id}
             className="w-1/4 h-32 bg-[#5694C8] p-4 flex justify-left items-end text-xs font-semibold rounded-3xl">
-            
-            {challenge.name}<br/><br/>
-            {challenge.points} points<br/>
-            Created on {challenge.created_date}<br/>
+            <Link href={`/challengelist/${challenge.name}`} as={`/challengelist/${challenge.name}`}>
+           
+            {challenge.name }<br/><br/>
+            {challenge.points } points<br/>
+            Created on {challenge.created_date }<br/>
+
+            </Link>
           </div>
         ))}
     </div>

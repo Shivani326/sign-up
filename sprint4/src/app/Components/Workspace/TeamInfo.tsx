@@ -7,7 +7,7 @@ const TeamInfo = () => {
     <div className="bg-[#F6F9FD] grid gap-4 text-white p-4 h-full rounded-3xl">
         <UserInfo/>
 
-        <div className="row-span-1 grid gap-4">
+        <div className="grid row-span-1 gap-4">
             <CompanyInfo/>
         </div>
     </div>

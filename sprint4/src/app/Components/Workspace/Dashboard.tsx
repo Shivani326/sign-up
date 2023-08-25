@@ -5,7 +5,8 @@ import Main from './Main';
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-10 gap-4 p-8 h-screen w-screen">
+    // <div className="grid w-screen h-screen grid-cols-7 gap-4 p-8">
+    <div className="grid w-screen h-screen grid-cols-10 gap-4 p-8">
       <div className="col-span-2">
         <Sidebar />
       </div>
